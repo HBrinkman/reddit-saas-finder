@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "reddit_saas_finder"
+version = "0.1.0"
+description = "reddit-saas-finder using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = ">=0.55.2,<1.0.0" }
+
+
+[tool.poetry.scripts]
+reddit_saas_finder = "reddit_saas_finder.main:run"
+run_crew = "reddit_saas_finder.main:run"
+train = "reddit_saas_finder.main:train"
+replay = "reddit_saas_finder.main:replay"
+test = "reddit_saas_finder.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
